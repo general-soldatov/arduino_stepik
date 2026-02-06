@@ -1,0 +1,72 @@
+- text:
+    path: null
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Sample text for choice
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - correct_answer
+      wrong:
+      - wrong_answer
+- sorting:
+    question:
+      types: sorting
+      text_data: Sample text for sorting
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      steps:
+      - step 1
+      - step 2
+- matching:
+    question:
+      types: matching
+      text_data: Sample text for matching
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - first
+      - second
+      second:
+      - one
+      - two
+- code:
+    question:
+      types: code
+      text_data: Sample text for code
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: ''
+        example: ''
+        test: ''
+        code_run: ''
+        code_template: ''
