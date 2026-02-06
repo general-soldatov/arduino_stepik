@@ -33,14 +33,13 @@ using namespace std::string_literals;
 
 int main() {
     std::string leds[13] = {};
-    const char* str =  ":-)";
     setup();
     for (int i = 0; i < TEST; i++)
         loop();
-    // for (std::string data : leds) {
-        std::cout << str;
-    // }
-
+    for (auto &data : leds) {
+        data = OFF;
+    }
+    std::cout << leds << std::endl;
 }
 
 
