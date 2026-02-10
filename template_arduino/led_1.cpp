@@ -6,11 +6,56 @@
 #include <map>
 #include <string>
 
+#define BIN 2
+#define OCT 8
+#define DEC 10
+#define HEX 16
+
 #define INPUT 0
 #define OUTPUT 1
 
 #define HIGH 1
 #define LOW 0
+
+class COMPORT {
+private:
+    int bond_auto = 0;
+    int bond_speed = 0;
+public:
+    COMPORT(int bond_auto_input) {
+        bond_auto = bond_auto_input;
+    }
+    void begin(int bond) {
+        bond_speed = bond;
+    }
+
+    void print(const char* text) {
+        while (*text != '\0') {
+            std::cout << (char)((*(text++) * bond_speed / bond_auto));
+        }
+    }
+
+    void print(int number, unsigned char mode) {
+        if (mode == HEX) {
+            std::cout << std::hex << number * bond_speed / bond_auto;
+            return;
+        }
+        if (number >= mode)
+            print(number / mode, mode);
+        std::cout << (number % mode * bond_speed / bond_auto);
+    }
+
+    void println(const char *text) {
+        print(text);
+        std::cout << std::endl;
+    }
+
+    void println(int number, unsigned char mode) {
+        print(number, mode);
+        std::cout << std::endl;
+    }
+
+};
 
 class Led {
 private:
@@ -83,7 +128,9 @@ public:
 
 };
 
-Led led("green");
+Led led("blue");
+COMPORT Serial(9600);
+
 
 void delay(int ms) {
     led.delay_ms(ms, 5);
@@ -124,7 +171,7 @@ void loop() {
     //     delay(1500);
     //     digitalWrite(i, LOW);
     // }
-    // for (int i = 1; i < 255; i+=2) {
+    // for (int i = 1; i < 255; i+=10) {
     //     analogWrite(3, i);
     //     delay(100);
     // }
@@ -135,6 +182,8 @@ void loop() {
     //     digitalWrite(2, HIGH);
     // }
     // delay(100);
+    Serial.begin(9600);
+    Serial.println(255, DEC);
 
 
 }
