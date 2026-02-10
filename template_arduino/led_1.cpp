@@ -45,12 +45,16 @@ public:
         std::cout << (number % mode * bond_speed / bond_auto);
     }
 
+    void print(float number, unsigned char mode) {
+        std::cout << std::fixed << std::setprecision(mode) << number;
+    }
+
     void println(const char *text) {
         print(text);
         std::cout << std::endl;
     }
 
-    void println(int number, unsigned char mode) {
+    void println(float number, unsigned char mode) {
         print(number, mode);
         std::cout << std::endl;
     }
@@ -183,7 +187,7 @@ void loop() {
     // }
     // delay(100);
     Serial.begin(9600);
-    Serial.println(255, DEC);
+    Serial.println(25.121, 2);
 
 
 }
