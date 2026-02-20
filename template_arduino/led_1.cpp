@@ -17,6 +17,9 @@
 #define HIGH 1
 #define LOW 0
 
+using String = const char*;
+// #define byte unsigned char
+
 class COMPORT {
 private:
     int bond_auto = 0;
@@ -186,8 +189,12 @@ void loop() {
     //     digitalWrite(2, HIGH);
     // }
     // delay(100);
+    String data = "care take to me";
     Serial.begin(9600);
     Serial.println(25.121, 2);
+    Serial.println(data);
+    // byte n = 23;
+    // Serial.println(n);
 
 
 }
