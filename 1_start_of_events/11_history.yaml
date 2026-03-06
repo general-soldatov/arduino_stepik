@@ -1,0 +1,77 @@
+- text:
+    path: 1_start_of_events/11_history.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Давай познакомимся, путешественник! Сколько тебе лет?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - меньше 14 лет
+      - от 14 до 17 лет
+      - от 18 до 23 лет
+      - от 24 до 28 лет
+      - старше 29 лет
+      wrong:
+      - wrong_answer
+- choice:
+    question:
+      types: choice
+      text_data: Кем ты сейчас работаешь?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - школьник
+      - студент колледжа
+      - студент вуза
+      - аспирант
+      - работаю (не в сфере IT)
+      - работаю (в сфере IT)
+      - преподавател
+      wrong:
+      - wrong_answer
+- choice:
+    question:
+      types: choice
+      text_data: Как ты узнал о нашем курсе?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - из интернета
+      - по рекомендации
+      - из подборки Stepik
+      - из соцсетей
+      wrong:
+      - wrong_answer
+- choice:
+    question:
+      types: choice
+      text_data: Ты готов к погружению?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - да!!!
+      wrong:
+      - нет
+      - напомнить через 3 дня
