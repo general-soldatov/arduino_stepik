@@ -25,3 +25,9 @@
   
 ✅ Ура! Наша программа установлена!
   <img width="922" height="719" alt="image" src="https://github.com/user-attachments/assets/20604b34-29e0-4a80-8f89-b3dec0f7249c" />
+
+<details><summary><b>Мемасик</b></summary>
+<img width="720" height="862" alt="image" src="https://github.com/user-attachments/assets/5d092f01-4dbb-41aa-9bd4-25f0c898a236" />
+
+</details>
+
