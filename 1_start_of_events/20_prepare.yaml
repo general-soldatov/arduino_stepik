@@ -1,0 +1,136 @@
+- text:
+    path: 1_start_of_events/21_prepare.md
+    data: null
+- text:
+    path: 1_start_of_events/22_prepare.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Можно ли собирать схемы и включать приборы рядом с напитками и едой?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - нет
+      wrong:
+      - да
+- choice:
+    question:
+      types: choice
+      text_data: "Чем больше тока проходит через прибор, тем больше нужно для него пространства в виде ____ провода. Подбери подходящее слово:"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - толщины
+      wrong:
+      - длины
+- choice:
+    question:
+      types: choice
+      text_data: "Что делать, если прибор начал вести себя неадекватно ожидаемому (появилось искрение, запах гари)?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - выключить прибор из розетки и позвать взрослого
+      wrong:
+      - ничего не делать
+      - попытаться сделать что-то самому
+- text:
+    path: 1_start_of_events/23_prepare.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: "За что можно трогать паяльник?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - за рукоять
+      wrong:
+      - за жало
+- choice:
+    question:
+      types: choice
+      text_data: "На что можно ставить паяльник?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - на подставку
+      wrong:
+      - на стол
+      - на любую поверхность
+- text:
+    path: 1_start_of_events/24_prepare.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: "Какое ПО можно скачивать?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - только проверенное
+      wrong:
+      - любое
+- choice:
+    question:
+      types: choice
+      text_data: "Можно ли исправлять что-то в настройках системы?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - нельзя
+      wrong:
+      - можно
+- choice:
+    question:
+      types: choice
+      text_data: "Где можно сохранять свои проекты?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - все вышеперечисленные варианты
+      wrong:
+      - GitHub
+      - GitLab
+      - GitVerse

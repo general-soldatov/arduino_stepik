@@ -1,0 +1,104 @@
+- text:
+    path: 1_start_of_events/31_sequel_of_prepare.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Получилось ли у тебя установить Arduino IDE?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Да, я программист!
+      - Нет, что оказалось сложным( Задам вопрос в комментариях!
+      wrong:
+      - wrong_answer
+- text:
+    path: 1_start_of_events/32_sequel_of_prepare.md
+    data: null
+- text:
+    path: 1_start_of_events/33_sequel_of_prepare.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Где планируешь программировать?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Я уже заказал платы с Aliexpress
+      - У меня уже есть платы, скачаю Arduino IDE и буду программировать
+      - Пока попробую программировать с помощью веб-симулятора
+      wrong:
+      - wrong_answer
+- choice:
+    question:
+      types: choice
+      text_data: Какой код пишется в функции `setup()`?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - который выполняется только один раз при запуске программы
+      wrong:
+      - который выполняется бесконечное число раз
+- choice:
+    question:
+      types: choice
+      text_data: Какой код пишется в функции `loop()`?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - который выполняется бесконечное число раз
+      wrong:
+      - который выполняется только один раз при запуске программы
+- choice:
+    question:
+      types: choice
+      text_data: Что запускает кнопка ✅?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - код для компиляции
+      wrong:
+      - компилирует код и прошивает микроконтроллер
+      - все вышеперечисленное
+- choice:
+    question:
+      types: choice
+      text_data: Что запускает кнопка стрелочка➡️?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - компилирует код и прошивает микроконтроллер
+      wrong:
+      - код для компиляции
+      - все вышеперечисленное
