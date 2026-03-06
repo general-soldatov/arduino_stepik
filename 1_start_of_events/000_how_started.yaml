@@ -65,7 +65,7 @@
         time: 5
         memory: 256
       code_path:
-        templates_data: ''
+        templates_data: 'template_arduino/led_1.cpp'
         example: ''
         test: ''
         code_run: ''

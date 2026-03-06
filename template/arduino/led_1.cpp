@@ -24,6 +24,7 @@ class COMPORT {
 private:
     int bond_auto = 0;
     int bond_speed = 0;
+    std::string com = "COM: | ";
 public:
     COMPORT(int bond_auto_input) {
         bond_auto = bond_auto_input;
@@ -33,12 +34,14 @@ public:
     }
 
     void print(const char* text) {
+        std::cout << com;
         while (*text != '\0') {
             std::cout << (char)((*(text++) * bond_speed / bond_auto));
         }
     }
 
     void print(int number, unsigned char mode) {
+        std::cout << com;
         if (mode == HEX) {
             std::cout << std::hex << number * bond_speed / bond_auto;
             return;
@@ -49,6 +52,7 @@ public:
     }
 
     void print(float number, unsigned char mode) {
+        std::cout << com;
         std::cout << std::fixed << std::setprecision(mode) << number;
     }
 
@@ -124,9 +128,9 @@ public:
     }
 
     void delay_ms(int ms, int st) {
-        std::cout << "LED | ";
-        for (const auto& [registr, digit] : console)
-            std::cout << color[(registr & digit)];
+        std::cout << "LED: | ";
+        for (auto digit : console)
+            std::cout << color[(digit[0] & digit[1])];
         std::cout << " | PAUSE: " << std::setw(st) << ms << " ms |";
         if (intensity != -1)
             std::cout << " Intensity:" << std::setw(3) << intensity << " % |";
@@ -173,11 +177,11 @@ void setup() {
 
 void loop() {
     // put your main code here, to run repeatedly
-    // for (int i = 0; i < 13; i++) {
-    //     digitalWrite(i, HIGH);
-    //     delay(1500);
-    //     digitalWrite(i, LOW);
-    // }
+    for (int i = 0; i < 13; i++) {
+        digitalWrite(i, HIGH);
+        delay(1500);
+        digitalWrite(i, LOW);
+    }
     // for (int i = 1; i < 255; i+=10) {
     //     analogWrite(3, i);
     //     delay(100);
