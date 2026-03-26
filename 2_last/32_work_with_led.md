@@ -32,3 +32,8 @@ void loop() {
 
 После прошивки платы светодиод продолжил моргать как ни в чём ни бывало с той же периодичностью в 1 секунду.
 
+<details><summary><b>Мемасик</b></summary>
+<img width="312" height="240" alt="image" src="https://github.com/user-attachments/assets/3c5b4e51-f815-4798-87da-50217a6c8816" />
+</details>
+
+
