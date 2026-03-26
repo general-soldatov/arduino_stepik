@@ -19,3 +19,8 @@ int number = 125;
 **Артём**: В некоторых случаях - да, в некоторых - нет. Но в нашем случае это пройдёт безболезненно для скетча.
 
 **Маша**: Отлично! Тогда я сейчас попробую исправить наш скетч.
+
+<details><summary><b>Мемасик</b></summary>
+<img width="650" height="490" alt="image" src="https://github.com/user-attachments/assets/b2a481d5-5ebe-4578-9f83-06ca6c7d6827" />
+
+</details>
