@@ -7,7 +7,7 @@
 
 **Вова:** Ну да, я ещё с уроков физики помню! Анод (положительный вывод) имеет более длинную ножку, чем катод (отрицательный вывод). 
 
-<img alt="Code" url="https://github.com/general-soldatov/arduino_stepik/main/blob/images/learn001.png">
+<img alt="Code" url="https://github.com/general-soldatov/arduino_stepik/main/images/learn001.png">
 
 Фонарик был готов. Маша нажала кнопку, но светодиод вспыхнул ослепительно ярким светом и внезапно погас.
 
