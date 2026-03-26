@@ -7,11 +7,12 @@
 
 **Вова:** Ну да, я ещё с уроков физики помню! Анод (положительный вывод) имеет более длинную ножку, чем катод (отрицательный вывод). 
 
-<img alt="Code" url="https://github.com/general-soldatov/arduino_stepik/main/images/learn001.png">
+<img width="438" height="574" alt="image" src="https://github.com/user-attachments/assets/81104d66-3ff5-466c-a1d3-26a7d79e6e2f" />
 
 Фонарик был готов. Маша нажала кнопку, но светодиод вспыхнул ослепительно ярким светом и внезапно погас.
 
-<img width="897" height="536" alt="image" src="https://github.com/user-attachments/assets/dff2ebc1-1aae-4e70-ac85-5afb79d52836" />
+<img width="589" height="293" alt="image" src="https://github.com/user-attachments/assets/35b9513a-285f-4fd6-8684-a81b9e0c2785" />
+
 
 
 **Маша**: Что случилось с фонариком?? Почему светодиод сгорел? Неужели ты всё-таки перепутал полярность?
