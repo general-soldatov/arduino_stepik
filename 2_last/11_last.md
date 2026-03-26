@@ -11,9 +11,7 @@
 
 Фонарик был готов. Маша нажала кнопку, но светодиод вспыхнул ослепительно ярким светом и внезапно погас.
 
-<img width="589" height="293" alt="image" src="https://github.com/user-attachments/assets/35b9513a-285f-4fd6-8684-a81b9e0c2785" />
-
-
+<img width="589" height="293" alt="image" src="https://github.com/user-attachments/assets/1e2d6db7-dfa6-48ef-a290-57cf8c71834f" />
 
 **Маша**: Что случилось с фонариком?? Почему светодиод сгорел? Неужели ты всё-таки перепутал полярность?
 
