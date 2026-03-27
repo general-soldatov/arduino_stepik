@@ -13,3 +13,8 @@ ms on the door
 **Вова**: Спасибо тебе, Андреа! Ты нам очень помог!
 
 Маша и Вова побежали к двери запасного входа.
+
+<details><summary><b>Мемасик</b></summary>
+<img width="755" height="858" alt="image" src="https://github.com/user-attachments/assets/2484e0fa-44e8-49f5-8d80-ea6aa01a7ded" />
+
+</details>
