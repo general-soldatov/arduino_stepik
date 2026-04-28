@@ -1,0 +1,190 @@
+- text:
+    path: 2_last/11_last.md
+    data: null
+- matching:
+    question:
+      types: matching
+      text_data: "Сопоставьте названия выводов светодиода и его полярность:"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - Анод
+      - Катод
+      second:
+      - положительный вывод
+      - отрицательный вывод
+- matching:
+    question:
+      types: matching
+      text_data: "Сопоставьте названия выводов светодиода с их длиной"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - Анод
+      - Катод
+      second:
+      - длинная ножка
+      - короткая ножка
+- text:
+    path: 2_last/12_last.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Важно ли соблюдать полярность при подключении светодиодов?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - да
+      wrong:
+      - нет
+- choice:
+    question:
+      types: choice
+      text_data: Что такое электрический ток?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - упорядоченное движение заряженных частиц
+      wrong:
+      - хаотичное движение заряженных частиц
+- choice:
+    question:
+      types: choice
+      text_data: Как движутся заряженные частицы в отсутствие внешнего электрического поля?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - хаотично
+      wrong:
+      - упорядоченно
+- matching:
+    question:
+      types: matching
+      text_data: "Соотнесите, какие частицы могут являться носителями тока?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - в металлах
+      - в электролитах
+      - в газах или  полупроводниках
+      second:
+      - электроны
+      - ионы
+      - электроны и дырки
+- text:
+    path: 2_last/13_last.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какое утверждение о длинной ножке светодиода (аноде) верно?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Подключается к плюсу питания или цифровому выходу
+      wrong:
+      - Подключается к GND
+      - Всегда подключается через резистор 10 кОм
+      - Не имеет значения, куда подключать
+- choice:
+    question:
+      types: choice
+      text_data: Зачем последовательно со светодиодом подключают резистор?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Чтобы ограничить ток и не сжечь светодиод
+      wrong:
+      - Чтобы увеличить яркость
+      - Чтобы светодиод мигал быстрее
+      - Чтобы ограничить ток и не сжечь светодиод
+      - Чтобы изменить цвет свечения
+- choice:
+    question:
+      types: choice
+      text_data: "**\"Ошибка начинающего\"** Что произойдёт, если подключить светодиод без резистора прямо между 5V и GND?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Светодиод перегорит (выйдет из строя)
+      wrong:
+      - Светодиод загорится ярче
+      - Светодиод будет мигать
+      - Ничего не произойдёт
+- number:
+    question:
+      types: number
+      text_data: Напряжение питания Arduino = 5 В. Падение напряжения на светодиоде = 2 В. Ток через светодиод должен быть 20 мА. Какое сопротивление (в Омах) резистора нужно (по закону Ома)?
+      code_path: null
+      image: null
+      help: "Формула: $R = \frac{U_{пит} - U_{сд}}{I}$"
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      data:
+      - answer: '150'
+        max_error: '0'
+- sorting:
+    question:
+      types: sorting
+      text_data: Отсортируйте величины сопротивления от меньшего к большему (подходят для светодиода)
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      steps:
+      - 100 Ом
+      - 220 Ом
+      - 1 кОм
+      - 10 кОм
