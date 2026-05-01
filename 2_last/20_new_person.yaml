@@ -46,8 +46,8 @@
 - choice:
     question:
       types: choice
-      text_data:
-      > Что делает этот код?
+      text_data: |-
+        Что делает этот код?
         ```cpp
         delay(1000);
         digitalWrite(9, HIGH);
@@ -79,60 +79,10 @@
       - хаотично
       wrong:
       - упорядоченно
-- matching:
-    question:
-      types: matching
-      text_data: "Соотнесите, какие частицы могут являться носителями тока?"
-      code_path: null
-      help: null
-    answer:
-      sample_size: null
-      feedback:
-        correct: ''
-        wrong: ''
-      first:
-      - в металлах
-      - в электролитах
-      - в газах или  полупроводниках
-      second:
-      - электроны
-      - ионы
-      - электроны и дырки
-- sorting:
-    question:
-      types: sorting
-      text_data: Sample text for sorting
-      code_path: null
-      help: null
-    answer:
-      sample_size: null
-      feedback:
-        correct: ''
-        wrong: ''
-      steps:
-      - step 1
-      - step 2
-- matching:
-    question:
-      types: matching
-      text_data: Sample text for matching
-      code_path: null
-      help: null
-    answer:
-      sample_size: null
-      feedback:
-        correct: ''
-        wrong: ''
-      first:
-      - first
-      - second
-      second:
-      - one
-      - two
 - code:
     question:
       types: code
-      text_data: Sample text for code
+      text_data: А теперь давай попробуем зажечь светодиод как Маша! Только надо зажечь светодиод под номером 5. Задержку ставим в 100 миллисекунд. Справишься?
       code_path: null
       help: null
     answer:
@@ -148,7 +98,7 @@
         memory: 256
       code_path:
         templates_data: 'template_arduino/led_1.cpp'
-        example: ''
+        example: '2_last/000_03_led.cpp'
         test: ''
         code_run: ''
-        code_template: ''
+        code_template: '2_last/000_01_led.cpp'

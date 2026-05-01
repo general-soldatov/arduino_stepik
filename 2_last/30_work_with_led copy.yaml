@@ -1,0 +1,173 @@
+- text:
+    path: 2_last/31_work_with_led.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Сколько миллисекунд в 2,5 секундах
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "2500"
+      wrong:
+      - "25"
+      - "25000"
+      - "1500"
+- code:
+    question:
+      types: code
+      text_data: Давай попробуем поморгать светодиодом под номером 12. Задержку ставим в 2 секунды. Мы уверены, что ты справишься!
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template_arduino/led_1.cpp'
+        example: '2_last/000_02_led.cpp'
+        test: ''
+        code_run: ''
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: Давай попробуем поморгать светодиодом под номером 12. Задержку ставим в 2 секунды. Мы уверены, что ты справишься!
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template_arduino/led_1.cpp'
+        example: '2_last/000_04_led.cpp'
+        test: ''
+        code_run: ''
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 2_last/32_work_with_led.md
+    data: null
+- text:
+    path: 2_last/33_work_with_led.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: "Как вы думаете, использование #define делает код более лаконичным и понятным?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Да, что тут думать!
+      - А я другого мнения! (напишу в комментариях)
+      wrong:
+      - None
+- choice:
+    question:
+      types: choice
+      text_data: "Для чего нужна директива #define"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - для определения констант
+      wrong:
+      - для объявления переменных
+- choice:
+    question:
+      types: choice
+      text_data: "Что делает следующая строка\n#define NUMBER 10"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Заменяет слово NUMBER на число 10 везде в коде до компиляции
+      wrong:
+      - Выводит число 10 на экран при запуске программы
+      - Создает переменную NUMBER со значением 10, которую можно изменить в программе
+      - Резервирует место в памяти Arduino для хранения числа 10
+- string:
+    question:
+      types: string
+      text_data: "Создайте директиву #define для установки светодиода с названием LED_BUILTIN_USER. Значение должно быть 4."
+      code_path: null
+      image: null
+      help: null
+    answer:
+      pattern: "#define LED_BUILTIN_USER 4"
+      use_re: false
+      match_substring: false
+      case_sensitive: false
+      code: ''
+      is_text_disabled: false
+      is_file_disabled: true
+- string:
+    question:
+      types: string
+      text_data: "Создайте директиву #define для установки паузы с названием MY_PAUSE. Значение должно быть равно 400."
+      code_path: null
+      image: null
+      help: null
+    answer:
+      pattern: "#define MY_PAUSE 400"
+      use_re: false
+      match_substring: false
+      case_sensitive: false
+      code: ''
+      is_text_disabled: false
+      is_file_disabled: true
+- code:
+    question:
+      types: code
+      text_data: "А теперь давай попробуем поморгать светодиодом с помощью директивы #define. Необходимо зажечь светодиод под номером 7. Задержку ставим в 300 миллисекунд. Имена констант должны быть LED_BUILTIN_USER и MY_PAUSE. И ты конечно справишься!"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template_arduino/led_1.cpp'
+        example: '2_last/000_05_led.cpp'
+        test: ''
+        code_run: ''
+        code_template: '2_last/000_01_led.cpp'
