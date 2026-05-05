@@ -25,7 +25,7 @@
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -36,19 +36,19 @@
         time: 5
         memory: 256
       code_path:
-        templates_data: 'template_arduino/led_1.cpp'
+        templates_data: 'template/arduino/led_1.cpp'
         example: '2_last/000_02_led.cpp'
-        test: ''
-        code_run: ''
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
         code_template: '2_last/000_01_led.cpp'
 - code:
     question:
       types: code
-      text_data: Давай попробуем поморгать светодиодом под номером 12. Задержку ставим в 2 секунды. Мы уверены, что ты справишься!
+      text_data: А теперь попробуем поморгать светодиодами под номерами 1, 3, 5, 12. Задержку ставим в 1 секунду. Вызов принят?
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -59,10 +59,10 @@
         time: 5
         memory: 256
       code_path:
-        templates_data: 'template_arduino/led_1.cpp'
+        templates_data: 'template/arduino/led_1.cpp'
         example: '2_last/000_04_led.cpp'
-        test: ''
-        code_run: ''
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
         code_template: '2_last/000_01_led.cpp'
 - text:
     path: 2_last/32_work_with_led.md
@@ -155,7 +155,7 @@
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -166,8 +166,8 @@
         time: 5
         memory: 256
       code_path:
-        templates_data: 'template_arduino/led_1.cpp'
+        templates_data: 'template/arduino/led_1.cpp'
         example: '2_last/000_05_led.cpp'
-        test: ''
-        code_run: ''
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
         code_template: '2_last/000_01_led.cpp'

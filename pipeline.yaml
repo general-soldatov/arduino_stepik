@@ -1,0 +1,62 @@
+course:
+  course_id: 258284
+  score:
+    choice: 1
+    matching: 2
+    code: 5
+    sorting: 1
+    number: 3
+    string: 3
+    text: null
+
+sections:
+  # - title: Начало
+  #   lessons:
+  #     - title: Как всё начиналось
+  #       steps: 1_start_of_events/10_history.yaml
+  #     - title: Подготовка перед путешествием
+  #       steps: 1_start_of_events/20_prepare.yaml
+  #     - title: Продолжаем подготовку
+  #       steps: 1_start_of_events/30_sequel_of_prepare.yaml
+  # - title: Дело в прошлом
+  #   lessons:
+      # - title: Дело в прошлом
+      #   steps: 2_last/10_how_started.yaml
+      # - title: Новый знакомый
+      #   steps: 2_last/20_new_person.yaml
+      # - title: Продолжаем работу со светодиодами
+      #   steps: 2_last/30_work_with_led.yaml
+      # - title: Переменных требуют наши скетчи...
+      #   steps: 2_last/40_variables.yaml
+  # - title: Кинематика
+  #   lessons:
+      # - title: Кинематика точки
+      #   steps: kinematics/10_point.yaml
+      # - title: О скорости в векторном виде
+      #   steps: kinematics/20_point_speed.yaml
+      # - title: О скорости в естественной и декартовой осях координат
+      #   steps: kinematics/30_point_speed.yaml
+      # - title: Ускоримся!
+      #   steps: kinematics/40_point_boost.yaml
+      # - title: Движение твёрдых тел
+      #   steps: kinematics/50_solid_body.yaml
+      # - title: О плоском движении твёрдого тела
+      #   steps: kinematics/60_solid_body.yaml
+      # - title: Сложное движение точки
+      #   steps: kinematics/70_complex.yaml
+  # - title: Динамика
+  #   lessons:
+      # - title: Законы динамики
+      #   steps: dynamics/10_introduce.yaml
+      # - title: Работа сил
+      #   steps: dynamics/20_forses.yaml
+      # - title: О колебательном движении
+      #   steps: dynamics/30_oscillation.yaml
+      # - title: Относительное движение точки
+      #   steps: dynamics/40_relative_motion.yaml
+      # - title: Динамика системы материальных точек
+      #   steps: dynamics/50_system.yaml
+      # - title: Дифференциальные уравнения движения системы
+      #   steps: dynamics/60_drive_system.yaml
+      # - title: Кинетическая энергия
+      #   steps: dynamics/70_kinetic_energy.yaml

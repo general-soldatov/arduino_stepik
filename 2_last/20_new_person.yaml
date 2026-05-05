@@ -14,7 +14,7 @@
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -31,7 +31,7 @@
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -55,7 +55,7 @@
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -82,11 +82,11 @@
 - code:
     question:
       types: code
-      text_data: А теперь давай попробуем зажечь светодиод как Маша! Только надо зажечь светодиод под номером 5. Задержку ставим в 100 миллисекунд. Справишься?
+      text_data:  А теперь давай попробуем зажечь светодиод как Маша! Только надо зажечь светодиод под номером 5. Задержку ставим в 100 миллисекунд. Справишься?
       code_path: null
       help: null
     answer:
-      sample_size: null
+      sample_size: 1
       feedback:
         correct: ''
         wrong: ''
@@ -97,8 +97,31 @@
         time: 5
         memory: 256
       code_path:
-        templates_data: 'template_arduino/led_1.cpp'
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '2_last/000_07_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: Задача посложнее, попробуем зажечь несколько светодиодов под номерами 2, 3, 5. Задержку ставим в 500 миллисекунд. Мы уверены, что ты справишься!
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
         example: '2_last/000_03_led.cpp'
-        test: ''
-        code_run: ''
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
         code_template: '2_last/000_01_led.cpp'

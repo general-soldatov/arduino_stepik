@@ -1,5 +1,5 @@
-::c++
-::header
+// c++
+// header
 #define TEST 2
 #include <iostream>
 #include <iomanip>
@@ -167,16 +167,18 @@ void analogWrite(unsigned char pin, unsigned char mode) {
     led_.analogWrite(pin, mode);
 }
 
-::code
-void setup() {
+int led = 3, pause = 100;
 
+void setup() {
+    pinMode(led, OUTPUT);
 }
 
 void loop() {
-
+    digitalWrite(led, HIGH);
+    delay(pause);
+    digitalWrite(led, LOW);
+    delay(pause);
 }
-
-::footer
 
 int main(int argc, char* argv[]) {
     setup();
