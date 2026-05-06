@@ -1,0 +1,174 @@
+- text:
+    path: 3_accident/21_accident.md
+    data: null
+- text:
+    path: 3_accident/22_accident.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Маша: Может быть b/r - это boud rate?
+        Вова: А что это такое,  я забыл...
+        Что такое boud rate?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - бит в секунду
+      wrong:
+      - байт в секунду
+- code:
+    question:
+      types: code
+      text_data: |
+        Маша: Так, если верить этой строчке:
+        b/r 74880
+        то мы должны выставить скорость в 74880 бод.
+        Вова: Получается с такой скоростью мы должны передавать фразу:
+        The Arduino bar never closes!
+        То есть, что бар Arduino никогда не закрывается. И отправлять эту фразу в функции loop(). Может быть число 3782 это как раз и есть задержка в миллисекундах?
+        Маша: Давай попробуем, сейчас напишу скетч.
+        Давайте поможем написать скетч для открытия двери запасного выхода.
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: 'Дверь открыта, путь свободен!'
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_2_bod.cpp'
+        example: '3_accident/003_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- choice:
+    question:
+      types: choice
+      text_data: "В чем разница между `Serial.print(\"A\")` и `Serial.println(\"A\")`?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "`println` добавляет перевод строки в конце"
+      wrong:
+      - "`println` печатает жирным шрифтом"
+      - "`print` печатает только числа"
+      - Разницы нет
+- choice:
+    question:
+      types: choice
+      text_data: А сколько это примерно байт в секунду при скорости 9600 бод?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 1200 байт/с
+      wrong:
+      - 96 байт/с
+      - 9600 байт/с
+      - 10000 байт/с
+- choice:
+    question:
+      types: choice
+      text_data: Как вывести два числа в одной строке через пробел?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Написать Serial.print(число1); Serial.print(" "); Serial.print(число2);
+      wrong:
+      - Написать два Serial.println()
+      - Это невозможно
+      - Написать Serial.print(число1, число2)
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Что выведет код?
+        ```cpp
+        String name = "Маша";
+        Serial.print("Привет, ");
+        Serial.print(name);
+        ```
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Привет, Маша
+      wrong:
+      - Привет, name
+      - "\"Привет, Маша\""
+      - Ошибка
+- code:
+    question:
+      types: code
+      text_data: Напишите программу, которая выводит числа от 1 до 5 в одну строку через пробел.
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/004_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: Напишите программу, которая выводит "Начало", затем через 2 секунды "Конец".
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/005_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'

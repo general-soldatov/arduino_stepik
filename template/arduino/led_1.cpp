@@ -1,6 +1,6 @@
 ::c++
 ::header
-#define TEST 2
+#define TEST 1
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -25,6 +25,7 @@ private:
     int bond_auto = 0;
     int bond_speed = 0;
     std::string com = "COM: | ";
+    bool string = true;
 public:
     COMPORT(int bond_auto_input) {
         bond_auto = bond_auto_input;
@@ -34,36 +35,58 @@ public:
     }
 
     void print(const char* text) {
-        std::cout << com;
+        if (string) {
+            std::cout << com;
+            string = false;
+        }
         while (*text != '\0') {
             std::cout << (char)((*(text++) * bond_speed / bond_auto));
         }
     }
 
-    void print(int number, unsigned char mode) {
-        std::cout << com;
+    void set_string(bool value) {
+        string = value;
+    }
+
+    void print(int number, unsigned char mode = DEC) {
+        if (string) {
+            std::cout << com;
+            string = false;
+        }
         if (mode == HEX) {
             std::cout << std::hex << number * bond_speed / bond_auto;
             return;
         }
         if (number >= mode)
             print(number / mode, mode);
-        std::cout << (number % mode * bond_speed / bond_auto);
+        std::cout << (number % mode * (bond_speed / bond_auto));
+
     }
 
     void print(float number, unsigned char mode) {
-        std::cout << com;
+        if (string) {
+            std::cout << com;
+            string = false;
+        }
         std::cout << std::fixed << std::setprecision(mode) << number;
+    }
+
+    void println(int number, unsigned char mode = DEC) {
+        print(number, mode);
+        std::cout << std::endl;
+        string = true;
     }
 
     void println(const char *text) {
         print(text);
         std::cout << std::endl;
+        string = true;
     }
 
     void println(float number, unsigned char mode) {
         print(number, mode);
         std::cout << std::endl;
+        string = true;
     }
 
 };
@@ -145,6 +168,7 @@ COMPORT Serial(9600);
 
 void delay(int ms) {
     led_.delay_ms(ms, 5);
+    Serial.set_string(true);
 }
 
 void pinMode(unsigned char pin, unsigned char mode) {

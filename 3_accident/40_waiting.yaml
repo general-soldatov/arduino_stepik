@@ -1,0 +1,205 @@
+- text:
+    path: 3_accident/41_waiting.md
+    data: null
+- code:
+    question:
+      types: code
+      text_data: |
+        Как вы догадались, время помогать! Маше требуется помощь в кодировании сигнала SOS. Светодиод мы подключаем к выводу номер 5, после чего напишем код по следующему правилу:
+        ```
+        Точка - 500 миллисекунд
+        Тире - 1000 миллисекунд
+        ```
+        И оставляем работать сигнал в бесконечном цикле функции `loop()`. Не забудь про использование циклических конструкций в программе!
+    answer:
+      sample_size: 1
+      feedback:
+        correct: 'Оказывается, что права Маша!'
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/007_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Чему равно `a` после выполнения?
+        ```cpp
+        int a = 10;
+        a++;
+        ```
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "11"
+      wrong:
+      - "9"
+      - "10"
+      - "20"
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Чему равно `a` после выполнения?
+        ```cpp
+        int a = 10;
+        a++;
+        a++;
+        a++;
+        ```
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "13"
+      wrong:
+      - "11"
+      - "12"
+      - "15"
+- string:
+    question:
+      types: string
+      text_data: |
+        Исправьте ошибку в цикле, который должен выполниться ровно 4 раза:
+        ```cpp
+        for (int i = 1; i <= 4; i--)
+        ```
+      code_path: null
+      image: null
+      help: null
+    answer:
+      pattern: for (int i = 1; i <= 4; i++)
+      use_re: false
+      match_substring: false
+      case_sensitive: false
+      code: ''
+      is_text_disabled: false
+      is_file_disabled: true
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Что напечатает следующий код?
+        ```cpp
+        int sum = 0;
+        for (int i = 1; i <= 5; i++) {
+            sum = sum + i;
+        }
+        Serial.println(sum);
+        ```
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "15"
+      wrong:
+      - "10"
+      - "5"
+      - "0"
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция в Arduino IDE устанавливает режим работы цифрового пина как выход?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - pinMode()
+      wrong:
+      - digitalWrite()
+      - analogRead()
+      - setup()
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция останавливает выполнение программы на 500 миллисекунд?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - delay(500)
+      wrong:
+      - wait(500)
+      - delayMicroseconds(500)
+      - timeout(500)
+- choice:
+    question:
+      types: choice
+      text_data: Где должна находится команда digitalWrite(ledPin, HIGH), чтобы светодиод мигал бесконечно?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - В loop() + delay()
+      wrong:
+      - Только в setup()
+      - В специальной функции blink()
+      - В pinMode()
+- choice:
+    question:
+      types: choice
+      text_data: Какая минимальная осмысленная задержка между переключениями светодиода, чтобы человек видел мигание?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 100 миллисекунд
+      wrong:
+      - 1 микросекунда
+      - 10 миллисекунд
+      - 0 миллисекунд
+- choice:
+    question:
+      types: choice
+      text_data: Какому напряжению соответствует HIGH на цифровом пине в Arduino?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 5 В
+      wrong:
+      - 0 В
+      - 3.3 В
+      - 9 В

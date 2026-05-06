@@ -1,0 +1,86 @@
+- text:
+    path: 3_accident/31_cycles.md
+    data: null
+- text:
+    path: 3_accident/32_cycles.md
+    data: null
+- text:
+    path: 3_accident/33_cycles.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Почему не рекомендуется многократно копировать одни и те же команды вручную?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Это съедает память микроконтроллера
+      - Это усложняет изменение количества повторов
+      wrong:
+      - Это ускоряет работу программы
+      - Это делает код более читаемым
+      - Это требует больше энергии от платы
+- choice:
+    question:
+      types: choice
+      text_data: "В цикле for (int i = 0; i < 5; i++) сколько раз выполнится тело цикла?"
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "5"
+      wrong:
+      - "6"
+      - "7"
+      - "1"
+- matching:
+    question:
+      types: matching
+      text_data: "Соотнеcите названия и назначения команд."
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - i-- (один термин)
+      - i--
+      - i++ (один термин)
+      - i++
+      second:
+      - декремент
+      - уменьшает значение переменной на 1
+      - инкремент
+      - увеличивает значение переменной на 1
+- code:
+    question:
+      types: code
+      text_data: Давай теперь проверим, кто прав - Володя или Маша? Создайте цикл по образцу из теоретической части. И выводить значение переменной i в монитор порта с переносом. Значение скорости устанавливаем в 9600 бод. Паузу ставить в 100 мс.
+    answer:
+      sample_size: 1
+      feedback:
+        correct: 'Оказывается, что права Маша!'
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/006_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'

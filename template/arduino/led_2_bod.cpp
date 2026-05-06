@@ -1,6 +1,6 @@
-// c++
-// header
-#define TEST 1
+::c++
+::header
+#define TEST 2
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -25,7 +25,6 @@ private:
     int bond_auto = 0;
     int bond_speed = 0;
     std::string com = "COM: | ";
-    bool string = true;
 public:
     COMPORT(int bond_auto_input) {
         bond_auto = bond_auto_input;
@@ -35,58 +34,36 @@ public:
     }
 
     void print(const char* text) {
-        if (string) {
-            std::cout << com;
-            string = false;
-        }
+        std::cout << com;
         while (*text != '\0') {
             std::cout << (char)((*(text++) * bond_speed / bond_auto));
         }
     }
 
-    void set_string(bool value) {
-        string = value;
-    }
-
-    void print(int number, unsigned char mode = DEC) {
-        if (string) {
-            std::cout << com;
-            string = false;
-        }
+    void print(int number, unsigned char mode) {
+        std::cout << com;
         if (mode == HEX) {
             std::cout << std::hex << number * bond_speed / bond_auto;
             return;
         }
         if (number >= mode)
             print(number / mode, mode);
-        std::cout << (number % mode * (bond_speed / bond_auto));
-
+        std::cout << (number % mode * bond_speed / bond_auto);
     }
 
     void print(float number, unsigned char mode) {
-        if (string) {
-            std::cout << com;
-            string = false;
-        }
+        std::cout << com;
         std::cout << std::fixed << std::setprecision(mode) << number;
-    }
-
-    void println(int number, unsigned char mode = DEC) {
-        print(number, mode);
-        std::cout << std::endl;
-        string = true;
     }
 
     void println(const char *text) {
         print(text);
         std::cout << std::endl;
-        string = true;
     }
 
     void println(float number, unsigned char mode) {
         print(number, mode);
         std::cout << std::endl;
-        string = true;
     }
 
 };
@@ -163,12 +140,11 @@ public:
 };
 
 Led led_("blue");
-COMPORT Serial(9600);
+COMPORT Serial(74880);
 
 
 void delay(int ms) {
     led_.delay_ms(ms, 5);
-    Serial.set_string(true);
 }
 
 void pinMode(unsigned char pin, unsigned char mode) {
@@ -191,32 +167,16 @@ void analogWrite(unsigned char pin, unsigned char mode) {
     led_.analogWrite(pin, mode);
 }
 
-int led = 5;
-
+::code
 void setup() {
-    pinMode(led, OUTPUT);
+
 }
 
 void loop() {
-    for (int i = 0; i < 3; i++) {
-        digitalWrite(led, HIGH);
-        delay(500);
-        digitalWrite(led, LOW);
-        delay(500);
-    }
-    for (int i = 0; i < 3; i++) {
-        digitalWrite(led, HIGH);
-        delay(1000);
-        digitalWrite(led, LOW);
-        delay(1000);
-    }
-    for (int i = 0; i < 3; i++) {
-        digitalWrite(led, HIGH);
-        delay(500);
-        digitalWrite(led, LOW);
-        delay(500);
-    }
+
 }
+
+::footer
 
 int main(int argc, char* argv[]) {
     setup();

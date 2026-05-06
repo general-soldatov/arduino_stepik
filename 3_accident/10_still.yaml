@@ -1,0 +1,154 @@
+- text:
+    path: 3_accident/11_still.md
+    data: null
+- text:
+    path: 3_accident/12_still.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Как открыть монитор порта в Arduino IDE?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Инструменты → Монитор порта
+      wrong:
+      - Файл → Новый
+      - Скетч → Проверить
+      - Правка → Копировать
+- choice:
+    question:
+      types: choice
+      text_data: Для чего используется функция Serial.begin(115200)?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Для инициализации передачи данных с заданной скоростью
+      wrong:
+      - Для вывода текста в монитор порта
+      - Для задержки передачи данных
+      - Для подключения светодиода
+- choice:
+    question:
+      types: choice
+      text_data: Что такое «боды» (baud rate)?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Количество бит в секунду
+      wrong:
+      - Количество символов в секунду
+      - Количество вольт на пине
+      - Скорость вращения мотора
+- choice:
+    question:
+      types: choice
+      text_data: Как вывести текст «Hello» в монитор порта с переводом строки?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Serial.println("Hello");
+      wrong:
+      - Serial.print("Hello");
+      - Serial.write("Hello");
+      - Serial.begin("Hello");
+- choice:
+    question:
+      types: choice
+      text_data: |
+        Что увидим в мониторе порта?
+        ```cpp
+        void setup() {
+          Serial.begin(115200);
+        }
+        void loop() {
+          Serial.print("*");
+          delay(500);
+        }
+        ```
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Звёздочку каждые 0.5 секунды без перевода строки
+      wrong:
+      - Звёздочку каждую секунду с новой строки
+      - Один раз * и ничего больше
+      - Ничего, так как нет Serial.println()
+- code:
+    question:
+      types: code
+      text_data: Напиши код, который каждую секунду выводит в монитор порта фразу "Arduino is alive!" с новой строки. Скорость 9600 бод.
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/002_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: |
+        Напиши программу для вывода фраз
+        ```
+        Привет, Артём!
+        Привет, Маша!
+        Привет, Вова!
+        ```
+        Каждое приветствие начинается с новой строчки. Пауза идёт в одну секунду после каждого набора имён. Порт должен работать со скоростью 9600 бод.
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_1.cpp'
+        example: '3_accident/001_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
