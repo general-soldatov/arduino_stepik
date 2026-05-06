@@ -1,0 +1,248 @@
+- text:
+    path: 4_first_aid/21_support.md
+    data: null
+- text:
+    path: 4_first_aid/22_support.md
+    data: null
+- text:
+    path: 4_first_aid/23_support.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какой режим пина позволяет подключать кнопку без внешнего резистора
+        (используя встроенный подтягивающий резистор)?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - INPUT_PULLUP
+      wrong:
+      - INPUT
+      - OUTPUT
+      - INPUT_PULLDOWN
+- choice:
+    question:
+      types: choice
+      text_data: При использовании `INPUT_PULLUP`, какое значение `digitalRead()` возвращает,
+        когда кнопка НЕ нажата?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - HIGH
+      wrong:
+      - LOW
+      - '0'
+      - 'true'
+- choice:
+    question:
+      types: choice
+      text_data: В условном операторе `if (x > 5) { ... } else { ... }`. Что произойдёт,
+        если `x = 3`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Выполнится блок else
+      wrong:
+      - Выполнится блок if
+      - Выполнятся оба блока
+      - Программа зависнет
+- choice:
+    question:
+      types: choice
+      text_data: В каком состоянии кнопка считается замкнутой (проводит ток) при подключении
+        с `INPUT_PULLUP`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Нажата
+      wrong:
+      - Отпущена
+      - Не имеет значения
+      - Только если подключена к 5V
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте значение digitalRead с состоянием кнопки (INPUT_PULLUP,
+        нормально разомкнутая кнопка):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - HIGH
+      - LOW
+      second:
+      - Кнопка не нажата, контакт разомкнут
+      - Кнопка нажата, контакт замкнут на GND
+- choice:
+    question:
+      types: choice
+      text_data: Какие способы подключения кнопки к Arduino существуют? (Выберите
+        все правильные ответы)
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: 'Да ты гуру!'
+        wrong: 'Правильных ответа 3, почитай внимательнее)))'
+      correct:
+      - С внешним подтягивающим резистором к GND
+      - С внешним подтягивающим резистором к 5V
+      - С использованием INPUT_PULLUP
+      wrong:
+      - Без резистора напрямую
+      - Только через оптопару
+- choice:
+    question:
+      types: choice
+      text_data: "Что делает следующий фрагмент кода?\n\nif (digitalRead(buttonPin)\
+        \ == LOW) {\n  digitalWrite(ledPin, HIGH);\n} else {\n  digitalWrite(ledPin,\
+        \ LOW);\n}"
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Светодиод горит, когда кнопка нажата
+      wrong:
+      - Светодиод горит, когда кнопка отпущена
+      - Светодиод мигает при нажатии
+      - Светодиод всегда горит
+- choice:
+    question:
+      types: choice
+      text_data: 'Выберите правильные способы организации бесконечного цикла в Arduino:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: 'Теперь тебя не страшно подпускать к микроконтроллерам!'
+        wrong: 'Правильных ответа 3 😉'
+      correct:
+      - while(1)
+      - for(;;)
+      - while(true)
+      wrong:
+      - loop()
+      - do {} while(0)
+      - if(1) {}
+- choice:
+    question:
+      types: choice
+      text_data: 'В программе используется кнопка с `INPUT_PULLUP`. Чтобы включить светодиод
+        при нажатии кнопки, нужно:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - if (digitalRead(buttonPin) == LOW) { digitalWrite(ledPin, HIGH); }
+      wrong:
+      - if (digitalRead(buttonPin) == HIGH) { digitalWrite(ledPin, HIGH); }
+      - if (digitalRead(buttonPin) == 1) { digitalWrite(ledPin, HIGH); }
+      - digitalWrite(ledPin, digitalRead(buttonPin));
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте конструкцию ветвления с её описанием:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: 'Да ты профи! Хотя мы это частично не проходили!'
+        wrong: ''
+      first:
+      - if
+      - if-else
+      - else if
+      - switch-case
+      second:
+      - Выполняет блок кода только при истинности условия
+      - Выполняет один блок при истинности, другой — при ложности
+      - Позволяет проверить несколько условий последовательно
+      - Выбирает один из многих вариантов по значению переменной
+
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте режим пина с его поведением:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - INPUT
+      - OUTPUT
+      - INPUT_PULLUP
+      second:
+      - Высокое входное сопротивление, нужно подключать внешний резистор
+      - Может выдавать ток до 40 мА, управляет нагрузкой
+      - Включает внутренний резистор ~20-50 кОм к 5V
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте условие `if` с результатом (`int x = 5`):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - if (x > 3)
+      - if (x == 3)
+      - if (x != 5)
+      - if (x >= 5)
+      second:
+      - Истинно
+      - Ложно
+      - Ложно
+      - Истинно

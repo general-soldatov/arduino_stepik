@@ -36,8 +36,8 @@ sections:
       #   steps: 3_accident/20_accident.yaml
       # - title: Зацикленные
       #   steps: 3_accident/30_cycles.yaml
-      - title: Ожидание
-        steps: 3_accident/40_waiting.yaml
+      # - title: Ожидание
+      #   steps: 3_accident/40_waiting.yaml
 
   # - title: Динамика
   #   lessons:

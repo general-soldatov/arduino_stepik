@@ -1,0 +1,206 @@
+- text:
+    path: 4_first_aid/11_first_aid.md
+    data: null
+- text:
+    path: 4_first_aid/12_first_aid.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какие пины можно использовать для одновременного независимого управления двумя светодиодами?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 3 и 5
+      - A0 и A1 (как цифровые)
+      wrong:
+      - 5V и GND
+      - RESET и 13
+- choice:
+    question:
+      types: choice
+      text_data: Какой максимальный ток (приблизительно) может выдавать один цифровой вывод Arduino Uno?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: 'Правильно! 40 мА - это максимум, превышение которого может привести к повреждению микроконтроллера!'
+        wrong: 'Как-то многовато...'
+      correct:
+      - "40 mA"
+      wrong:
+      - "5 A"
+      - "500 mA"
+      - "1 A"
+- choice:
+    question:
+      types: choice
+      text_data: Что делает функция `delay(1000)` во время мигания светодиодом?
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Полностью останавливает выполнение программы на 1 секунду
+      wrong:
+      - Останавливает только светодиод
+      - Продолжает выполнять другие команды параллельно
+      - Уменьшает яркость
+- sorting:
+    question:
+      types: sorting
+      text_data: Расположите строки кода в том порядке, в котором они должны идти в правильной программе мигания.
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      steps:
+      - void setup() {
+      - pinMode(led, OUTPUT);
+      - "} void loop() {"
+      - digitalWrite(led, HIGH); delay(1000);
+      - digitalWrite(led, LOW);
+      - delay(1000); }
+- number:
+    question:
+      types: number
+      text_data: Светодиод мигает с частотой 2 Гц (2 полных цикла в секунду). Какова длительность одного периода (в миллисекундах)?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      data:
+      - answer: '500'
+        max_error: '0'
+- code:
+    question:
+      types: code
+      text_data: "Начнём помогать Никосу, Маше и Вове. Для этого давай сначала напишем программу для управления зелёным светододиодом. Нам необходимо поморгать фонарём три раза с периодичностью в 1 секунду. Затем, установим паузу в 5 секунд. Зелёный навигационный фонарь мы подключаем к цифровому выводу 4. Попробуй это сделать с помощью цикла! Подсказка: Период в 1 секунду - это значит 500 мс светодиод горит, и 500 мс - не горит."
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_3_green.cpp'
+        example: '4_first_aid/001_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 4_first_aid/13_first_aid.md
+    data: null
+- number:
+    question:
+      types: number
+      text_data: Светодиод горит 100 мс и не горит 300 мс. Какова частота мигания в Гц?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      data:
+      - answer: '500'
+        max_error: '0'
+- choice:
+    question:
+      types: choice
+      text_data: Давай посчитаем, какую задержку нужно поставить в переменную delay_pwm. Напомним, что нужно зажечь светодиод в течение 3-х секунд.
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - "12"
+      wrong:
+      - "8"
+      - "10"
+      - "14"
+- number:
+    question:
+      types: number
+      text_data: Помним, что ещё светодиод надо потушить в течение 5 секунд. Какая здесь должна быть задержка в цикле в миллисекундах. Значение округлить до целых.
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      data:
+      - answer: '20'
+        max_error: '0'
+- code:
+    question:
+      types: code
+      text_data: Итак, пора доработать код, который написала Маша. Необходимо, чтобы белый фонарь, подключенный к цифровому выводу 3. Медленно зажигался в течение 3-х секунд, а затем медленно погасал в течение 5 секунд. Между двумя циклами должна быть пауза в 3 секунды.
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: '4_first_aid/002_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: |
+        Вот и пришло время сообрать полноценнцую программу. Вспоминаем шифр:
+        Необходимо плавно зажигать белый сигнальный фонарь в течение 3-х секунд, потом три раза поморгать зелёным с периодом в 1 секунду. Потом плавно потушить белый сигнальный фонарь в течение 5 секунд, а потом тишина 3 секунды.
+        Тишина устанавливается паузой в 3 секунды. Желаем успехов, от тебя зависит будущее ребят!
+    answer:
+      sample_size: 1
+      feedback:
+        correct: 'Ура! Никос теперь сможет припарковаться!'
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_5_diff.cpp'
+        example: '4_first_aid/003_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'

@@ -1,0 +1,220 @@
+- text:
+    path: 4_first_aid/41_drive.md
+    data: null
+- text:
+    path: 4_first_aid/42_drive.md
+    data: null
+- text:
+    path: 4_first_aid/43_drive.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Для чего обычно используется реле в проектах на Arduino?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Для управления мощной нагрузкой (освещение, насосы, двигатели) от слаботочных
+        выходов микроконтроллера
+      wrong:
+      - Для измерения температуры окружающей среды
+      - Для увеличения тактовой частоты процессора
+      - Для беспроводной передачи данных
+- choice:
+    question:
+      types: choice
+      text_data: Что делает директива `#define LED_PIN 13` в коде Arduino?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Заменяет все вхождения `LED_PIN` на `13` на этапе препроцессинга кода
+      wrong:
+      - Объявляет переменную `LED_PIN` типа int со значением 13
+      - Создаёт константу, которая занимает память микроконтроллера
+      - Включает светодиод на пине 13
+- choice:
+    question:
+      types: choice
+      text_data: Как правильно прочитать состояние датчика (например, кнопки), чтобы
+        потом включить реле?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - int sensorState = digitalRead(sensorPin);
+      wrong:
+      - int sensorState = analogRead(sensorPin);
+      - digitalWrite(sensorPin, HIGH);
+      - pinMode(sensorPin, OUTPUT); sensorState = digitalRead(sensorPin);
+- choice:
+    question:
+      types: choice
+      text_data: При использовании директивы `#define RELAY_PIN 7`, какой командой
+        можно включить реле (модуль с низким уровнем включения, `LOW` активирует реле)?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - digitalWrite(RELAY_PIN, LOW);
+      wrong:
+      - digitalWrite(7, HIGH);
+      - analogWrite(RELAY_PIN, 255);
+      - digitalRead(RELAY_PIN, LOW);
+- choice:
+    question:
+      types: choice
+      text_data: Какие меры предосторожности нужно соблюдать при работе с реле? (Выберите
+        несколько)
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Изолировать высоковольтную часть (220В) от низковольтной
+      - Использовать защитный диод, если реле подключено напрямую (не модулем) к транзистору
+      - Убедиться, что ток коммутации не превышает допустимый для контактов реле
+      wrong:
+      - Подавать на управляющий пин реле ШИМ-сигнал
+      - Подключать реле к аналоговым пинам
+      - Обязательно использовать пин 13, так как только он подходит для реле
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте термин с его описанием для релейного модуля:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - COM
+      - NO (Normally Open)
+      - NC (Normally Closed)
+      - IN (Control pin)
+      second:
+      - Общий контакт реле (подключается к нагрузке)
+      - Нормально разомкнутый контакт — разомкнут, когда реле неактивно
+      - Нормально замкнутый контакт — замкнут, когда реле неактивно
+      - Управляющий вход модуля (подключается к пину Arduino)
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте конструкцию кода с её названием:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - '#define LED 13'
+      - const int ledPin = 13;
+      - digitalRead(buttonPin)
+      - digitalWrite(relayPin, HIGH)
+      second:
+      - Директива препроцессора (макроподстановка)
+      - Объявление константной переменной в памяти
+      - Чтение состояния цифрового входа
+      - Установка высокого уровня на пине (включение реле)
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте условие if с действием для автоматического управления
+        освещением через реле (датчик движения подключён к пину 8, реле к пину 7,
+        HIGH на датчике — движение есть):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - if (digitalRead(8) == HIGH)
+      - if (digitalRead(8) == LOW)
+      - digitalWrite(7, HIGH)
+      - digitalWrite(7, LOW)
+      second:
+      - Условие для обнаружения движения (датчик активен)
+      - Условие для отсутствия движения
+      - Команда на включение реле (зависит от типа модуля, здесь HIGH включает реле)
+      - Команда на выключение реле
+- code:
+    question:
+      types: code
+      text_data: |
+        Итак, переходим к программированию нашего девайса. Пока что мы не будем учитывать работу поворотников. Поэтому подключаем к цифровому выводу 9 реле, к 10 выводу - кнопку. Необходимо запрограммировать включение реле и света через переменную флаг. При первом нажатии на кнопку свет загорается, при следующем - выключается. Проверка состояния флага должна быть во вложенной условной конструкции. Задержку установите в 300 мс.
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - '10 1 10 1'
+        - '10 0 10 1'
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: '4_first_aid/005_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- code:
+    question:
+      types: code
+      text_data: Теперь пришло время собрать скрипт воедино! В функции `loop` должны включаться поворотники и свет. Сначала опрашиваем в цикле `loop()` свет, потом поворотники (левый и правый).
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - '10 1 7 1 6 0 10 0 7 0 6 0 10 1 7 0 6 1'
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: '4_first_aid/006_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 4_first_aid/44_drive.md
+    data: null

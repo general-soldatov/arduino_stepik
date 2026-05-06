@@ -28,3 +28,63 @@
       code: ''
       is_text_disabled: false
       is_file_disabled: true
+- sorting:
+    question:
+      types: sorting
+      text_data: Расположите строки кода в том порядке, в котором они должны идти в правильной программе мигания.
+      code_path: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      steps:
+      - void setup() {
+      - pinMode(led, OUTPUT);
+      - "} void loop() {"
+      - digitalWrite(led, HIGH); delay(1000);
+      - digitalWrite(led, LOW);
+      - delay(1000); }
+- matching:
+    question:
+      types: matching
+      text_data: "Соотнеcите названия и назначения команд."
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - i-- (один термин)
+      - i--
+      - i++ (один термин)
+      - i++
+      second:
+      - декремент
+      - уменьшает значение переменной на 1
+      - инкремент
+      - увеличивает значение переменной на 1
+- code:
+    question:
+      types: code
+      text_data: Итак, пора доработать код, который написала Маша. Необходимо, чтобы белый фонарь, подключенный к цифровому выводу 3. Медленно зажигался в течение 3-х секунд, а затем медленно погасал в течение 5 секунд. Между двумя циклами должна быть пауза в 3 секунды.
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: '4_first_aid/002_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'

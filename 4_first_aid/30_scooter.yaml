@@ -1,0 +1,278 @@
+- text:
+    path: 4_first_aid/31_scooter.md
+    data: null
+- matching:
+    question:
+      types: matching
+      text_data: "Соотнеcите названия и назначения команд."
+      code_path: null
+      help: null
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      second:
+      - LED правого поворотника
+      - LED левого поворотника
+      - ничего
+      - кнопка правого поворотника
+      - кнопка жёлтого поворотника
+- code:
+    question:
+      types: code
+      text_data: |
+        Итак, ребята, как вы догадались, нужно помочь Маше доделать код из примера. Схема подключения должна быть такая:
+        За левый поворотник отвечает жёлтая кнока, за правый - зелёная. Период моргания должен быть в 1 секунду. Назначить выводы рекомендуем через директиву #define, но не настаиваем 😉
+        Обработку нажатий проверять с левого поворотника!
+        Подсказка: Период это время, за которое совершится одно включение и одно выключение.
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - '7 0 6 1'
+        - '7 1 6 1'
+        - '7 1 6 0'
+        - '7 0 6 0'
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: '4_first_aid/004_led.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 4_first_aid/32_scooter.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция используется для генерации ШИМ-сигнала на Arduino?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - analogWrite()
+      wrong:
+      - digitalWrite()
+      - pwmWrite()
+      - analogRead()
+- choice:
+    question:
+      types: choice
+      text_data: Какие значения может принимать `analogWrite()` для управления яркостью
+        светодиода?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - от 0 до 255
+      wrong:
+      - от 0 до 1023
+      - от 0 до 100
+      - только 0 или 1
+- choice:
+    question:
+      types: choice
+      text_data: Что произойдёт со светодиодом при вызове `analogWrite(9, 0)`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Светодиод погаснет полностью
+      wrong:
+      - Светодиод загорится на половину яркости
+      - Светодиод загорится максимально ярко
+      - Светодиод начнёт мигать
+- choice:
+    question:
+      types: choice
+      text_data: Какие пины на Arduino Uno поддерживают ШИМ (аппаратно)?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 3, 5, 6, 9, 10, 11
+      wrong:
+      - 0, 1, 2, 3, 4, 5
+      - A0, A1, A2, A3, A4, A5
+      - только 9 и 10
+- choice:
+    question:
+      types: choice
+      text_data: Какой оператор увеличивает переменную `i` на 1? (Выберите все правильные
+        варианты)
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - i++
+      - ++i
+      - i = i + 1
+      wrong:
+      - i += 2
+      - i--
+      - i + 1
+- choice:
+    question:
+      types: choice
+      text_data: Какой цикл `for` создаст плавное увеличение яркости светодиода от минимума
+        до максимума?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - for (int brightness = 0; brightness <= 255; brightness++) { analogWrite(ledPin,
+        brightness); delay(10); }
+      wrong:
+      - for (int brightness = 255; brightness >= 0; brightness--) { analogWrite(ledPin,
+        brightness); delay(10); }
+      - for (int i = 0; i < 256; i--) { analogWrite(ledPin, i); }
+      - for (;;) { analogWrite(ledPin, 128); }
+- choice:
+    question:
+      types: choice
+      text_data: Что означает оператор i--?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Уменьшить i на 1
+      wrong:
+      - Увеличить i на 1
+      - Умножить i на -1
+      - Присвоить i значение -1
+- choice:
+    question:
+      types: choice
+      text_data: 'Какой эффект создаст код: for (int i = 0; i <= 255; i++) { analogWrite(ledPin,
+        i); delay(5); } for (int i = 255; i >= 0; i--) { analogWrite(ledPin, i); delay(5);
+        }'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Светодиод плавно загорается и плавно гаснет (эффект дыхания)
+      wrong:
+      - Светодиод быстро мигает
+      - Светодиод горит постоянно с переменной яркостью
+      - Светодиод не загорится вовсе
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте значение `analogWrite()` с яркостью светодиода:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - '0'
+      - '64'
+      - '128'
+      - '192'
+      - '255'
+      second:
+      - 0% яркости (полностью выключен)
+      - 25% яркости
+      - 50% яркости
+      - 75% яркости
+      - 100% яркости (полностью включён)
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте оператор с его действием (при x = 5):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - x++
+      - ++x
+      - x--
+      - --x
+      second:
+      - Сначала вернуть 5, затем увеличить x до 6
+      - Сначала увеличить x до 6, затем вернуть 6
+      - Сначала вернуть 5, затем уменьшить x до 4
+      - Сначала уменьшить x до 4, затем вернуть 4
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте функцию с её назначением:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - digitalWrite()
+      - analogWrite()
+      - delay()
+      - pinMode()
+      second:
+      - Устанавливает на пине HIGH (5V) или LOW (0V)
+      - Генерирует ШИМ-сигнал для управления яркостью
+      - Останавливает программу на заданное количество миллисекунд
+      - Настраивает режим работы пина (INPUT/OUTPUT/INPUT_PULLUP)

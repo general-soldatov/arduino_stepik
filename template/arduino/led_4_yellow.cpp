@@ -1,5 +1,5 @@
-// c++
-// header
+::c++
+::header
 #define TEST 1
 #include <iostream>
 #include <iomanip>
@@ -192,52 +192,16 @@ void analogWrite(unsigned char pin, unsigned char mode) {
     led_.analogWrite(pin, mode);
 }
 
-#undef TEST
-#define TEST 3
-#define LED_LEFT 4
-#define BUT_LEFT 7
-#define LED_RIGHT 3
-#define BUT_RIGHT 6
-#define LUX_BUT 10
-#define LUX_RELAY 9
-bool onLED = false;
+::code
 void setup() {
-     pinMode(LUX_RELAY, OUTPUT);
-     pinMode(LUX_BUT, INPUT_PULLUP);
-     pinMode(LED_LEFT, OUTPUT);
-     pinMode(BUT_LEFT, INPUT_PULLUP);
-     pinMode(LED_RIGHT, OUTPUT);
-     pinMode(BUT_RIGHT, INPUT_PULLUP);
-}
-void loop() {
-     if (digitalRead(LUX_BUT) == LOW) {
-          if (onLED == false) {
-               digitalWrite(LUX_RELAY, HIGH);
-               onLED = 1;
-          } else {
-               digitalWrite(LUX_RELAY, LOW);
-               onLED = 0;
-          }
-     }
-     if (digitalRead(BUT_LEFT) == LOW) {
-          for (int i = 0; i < 3; i++) {
-               digitalWrite(LED_LEFT, HIGH);
-               delay(500);
-               digitalWrite(LED_LEFT, LOW);
-               delay(500);
-          }
-     }
-     if (digitalRead(BUT_RIGHT) == LOW) {
-          for (int i = 0; i < 3; i++) {
-               digitalWrite(LED_RIGHT, HIGH);
-               delay(500);
-               digitalWrite(LED_RIGHT, LOW);
-               delay(500);
-          }
-  }
-     delay(300);
+
 }
 
+void loop() {
+
+}
+
+::footer
 
 int main(int argc, char* argv[]) {
     setup();
