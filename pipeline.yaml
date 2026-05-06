@@ -28,8 +28,8 @@ sections:
       #   steps: 2_last/30_work_with_led.yaml
       # - title: Переменных требуют наши скетчи...
       #   steps: 2_last/40_variables.yaml
-  - title: Внезапное происшествие
-    lessons:
+  # - title: Внезапное происшествие
+  #   lessons:
       # - title: Затишье перед бурей
       #   steps: 3_accident/10_still.yaml
       # - title: Внезапное происшествие
@@ -39,19 +39,13 @@ sections:
       # - title: Ожидание
       #   steps: 3_accident/40_waiting.yaml
 
-  # - title: Динамика
-  #   lessons:
-      # - title: Законы динамики
-      #   steps: dynamics/10_introduce.yaml
-      # - title: Работа сил
-      #   steps: dynamics/20_forses.yaml
-      # - title: О колебательном движении
-      #   steps: dynamics/30_oscillation.yaml
-      # - title: Относительное движение точки
-      #   steps: dynamics/40_relative_motion.yaml
-      # - title: Динамика системы материальных точек
-      #   steps: dynamics/50_system.yaml
-      # - title: Дифференциальные уравнения движения системы
-      #   steps: dynamics/60_drive_system.yaml
-      # - title: Кинетическая энергия
-      #   steps: dynamics/70_kinetic_energy.yaml
+  - title: Спасение близко, но....
+    lessons:
+      # - title: Нас заметили!
+      #   steps: 4_first_aid/10_first_aid.yaml
+      # - title: Нас приняли!
+      #   steps: 4_first_aid/20_support.yaml
+      - title: Скутер работает?
+        steps: 4_first_aid/30_scooter.yaml
+      - title: Перекрёсток
+        steps: 4_first_aid/40_drive.yaml
