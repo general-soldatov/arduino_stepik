@@ -45,7 +45,15 @@ sections:
       #   steps: 4_first_aid/10_first_aid.yaml
       # - title: Нас приняли!
       #   steps: 4_first_aid/20_support.yaml
-      - title: Скутер работает?
-        steps: 4_first_aid/30_scooter.yaml
-      - title: Перекрёсток
-        steps: 4_first_aid/40_drive.yaml
+      # - title: Скутер работает?
+      #   steps: 4_first_aid/30_scooter.yaml
+      # - title: Перекрёсток
+      #   steps: 4_first_aid/40_drive.yaml
+  - title: Бежать!
+    lessons:
+      - title: В плену...
+        steps: 4_first_aid/10_first_aid.yaml
+      - title: Технологии нас спасут!
+        steps: 4_first_aid/20_support.yaml
+      - title: Час настал!
+        steps: 4_first_aid/20_support.yaml
