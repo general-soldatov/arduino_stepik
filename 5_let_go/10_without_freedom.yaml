@@ -1,0 +1,282 @@
+- text:
+    path: 5_let_go/11_without_freedom.md
+    data: null
+- text:
+    path: 5_let_go/12_without_freedom.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция используется для вывода данных в монитор последовательного
+        порта (Serial Monitor) с автоматическим переходом на новую строку?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Serial.println()
+      wrong:
+      - Serial.print()
+      - Serial.write()
+      - Serial.read()
+- choice:
+    question:
+      types: choice
+      text_data: Что произойдёт, если в цикле for написать `for (int i = 0; i <= 10;
+        i++)`? Сколько раз выполнится тело цикла?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - '11'
+      wrong:
+      - '10'
+      - '9'
+      - бесконечно
+- choice:
+    question:
+      types: choice
+      text_data: Какие из перечисленных пинов Arduino Uno поддерживают аппаратный
+        ШИМ (analogWrite)? (Выберите все правильные)
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - '3'
+      - '5'
+      - '6'
+      - '9'
+      - '10'
+      - '11'
+      wrong:
+      - '0'
+      - '1'
+      - '2'
+      - '4'
+      - '7'
+      - '8'
+      - '12'
+      - '13'
+      - A0
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+- choice:
+    question:
+      types: choice
+      text_data: В чём разница между `digitalWrite()` и `analogWrite()`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - digitalWrite() устанавливает HIGH (5V) или LOW (0V), analogWrite() устанавливает
+        ШИМ-сигнал со скважностью 0-255 для управления яркостью
+      wrong:
+      - digitalWrite() работает только с аналоговыми пинами, analogWrite() — с цифровыми
+      - digitalWrite() медленнее analogWrite()
+      - Это одно и то же, analogWrite() — устаревший синоним digitalWrite()
+- choice:
+    question:
+      types: choice
+      text_data: Что делает функция `delay(1000)`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Останавливает выполнение программы на 1000 миллисекунд (1 секунду)
+      wrong:
+      - Выводит число 1000 в Serial Monitor
+      - Устанавливает таймер на 1 секунду без остановки программы
+      - Создаёт задержку в микросекундах
+- code:
+    question:
+      types: code
+      text_data: Подключите светодиод к цифровому пину 10. Напишите программу, которая заставляет светодиод мигать с периодом 2 секунды (1 секунда горит, 1 секунда не горит).
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: 5_let_go/004_prog.cpp
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- choice:
+    question:
+      types: choice
+      text_data: Как правильно настроить последовательный порт в Arduino на скорость
+        9600 бод?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Serial.begin(9600);
+      wrong:
+      - Serial.start(9600);
+      - Serial.setup(9600);
+      - Serial.open(9600);
+- choice:
+    question:
+      types: choice
+      text_data: Что выведет в Serial Monitor следующий код? `int x = 5; if (x > 3)
+        { Serial.print("A"); } else { Serial.print("B"); }`
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - A
+      wrong:
+      - B
+      - AB
+      - ничего не выведет
+- choice:
+    question:
+      types: choice
+      text_data: Какой код реализует плавное увеличение яркости светодиода с помощью
+        ШИМ?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - for (int i = 0; i <= 255; i++) { analogWrite(ledPin, i); delay(10); }
+      wrong:
+      - for (int i = 255; i >= 0; i--) { analogWrite(ledPin, i); delay(10); }
+      - digitalWrite(ledPin, HIGH); delay(1000); digitalWrite(ledPin, LOW);
+      - analogWrite(ledPin, 128);
+- code:
+    question:
+      types: code
+      text_data: "Светодиод на пине 9 должен мигать так: быстро три раза (200 мс вкл / 200 мс выкл), затем долгая пауза 2 секунды. Повторять бесконечно."
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: 5_let_go/005_prog.cpp
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте значение analogWrite() с яркостью светодиода:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - '0'
+      - '64'
+      - '128'
+      - '192'
+      - '255'
+      second:
+      - 0% яркости (полностью выключен)
+      - 25% яркости
+      - 50% яркости
+      - 75% яркости
+      - 100% яркости (полностью включён)
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте тип цикла for с его описанием:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - for (int i = 0; i < 10; i++)
+      - for (int i = 10; i > 0; i--)
+      - for (int i = 0; i <= 255; i++)
+      - for (int i = 255; i >= 0; i--)
+      second:
+      - Увеличение i от 0 до 9 (10 итераций)
+      - Уменьшение i от 10 до 1 (10 итераций)
+      - Плавное увеличение яркости от 0 до 255 (для ШИМ)
+      - Плавное уменьшение яркости от 255 до 0 (для ШИМ)
+- code:
+    question:
+      types: code
+      text_data: "К пинам 3, 4 и 5 подключены три светодиода (аноды через резисторы, катоды на GND). Напишите программу, которая поочерёдно зажигает каждый светодиод на 1 секунду в прямом и обратном порядке (3→4→5→4→3) и повторяет это бесконечно."
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/led_4_yellow.cpp'
+        example: 5_let_go/006_prog.cpp
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'

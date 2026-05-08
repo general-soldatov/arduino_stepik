@@ -1,0 +1,205 @@
+- text:
+    path: 5_let_go/21_techonology.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какой оператор увеличивает значение переменной на 1? (Выберите все
+        правильные)
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - i++
+      - ++i
+      - i = i + 1
+      wrong:
+      - i += 2
+      - i--
+      - i + 1
+- choice:
+    question:
+      types: choice
+      text_data: Что выведет в Serial Monitor код? `int a = 10; int b = 20; if (a
+        > b) { Serial.print("a больше"); } else if (a == b) { Serial.print("a равно
+        b"); } else { Serial.print("b больше"); }`
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - b больше
+      wrong:
+      - a больше
+      - a равно b
+      - ничего
+- text:
+    path: 5_let_go/22_techonology.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция Arduino генерирует звуковой сигнал заданной частоты
+        на указанном пине?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - tone()
+      wrong:
+      - sound()
+      - beep()
+      - frequency()
+- choice:
+    question:
+      types: choice
+      text_data: Какой синтаксис позволяет воспроизвести звук частотой 440 Гц в течение
+        500 миллисекунд без использования отдельной команды noTone()?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - tone(8, 440, 500);
+      wrong:
+      - tone(8, 440); delay(500); noTone(8);
+      - tone(440, 500, 8);
+      - sound(8, 440, 500);
+- choice:
+    question:
+      types: choice
+      text_data: Какая функция используется для остановки генерации звука на пине,
+        если tone() была вызвана без указания длительности?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - noTone()
+      wrong:
+      - stopTone()
+      - silence()
+      - endTone()
+- choice:
+    question:
+      types: choice
+      text_data: Что произойдёт, если вызвать tone(9, 1000), а затем через 2 секунды
+        вызвать tone(9, 2000) без вызова noTone(9) между ними?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Звук изменится на частоту 2000 Гц
+      wrong:
+      - Будут звучать обе частоты одновременно
+      - Ничего не произойдёт, так как пин занят
+      - Микроконтроллер зависнет
+- code:
+    question:
+      types: code
+      text_data: Давайте поможем ребятам! Необходимо написать программу для генерации мелодии.
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/tone_1.cpp'
+        example: '5_let_go/001_prog.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 5_let_go/23_techonology.md
+    data: null
+- choice:
+    question:
+      types: choice
+      text_data: Какая частота соответствует ноте «Ля» первой октавы (стандарт для
+        настройки музыкальных инструментов)?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - 440 Гц
+      wrong:
+      - 220 Гц
+      - 880 Гц
+      - 1000 Гц
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте конструкцию с её действием или значением (при x = 5):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - x++
+      - ++x
+      - x--
+      - --x
+      second:
+      - Сначала вернуть 5, затем увеличить x до 6
+      - Сначала увеличить x до 6, затем вернуть 6
+      - Сначала вернуть 5, затем уменьшить x до 4
+      - Сначала уменьшить x до 4, затем вернуть 4
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте ноту с её частотой (в герцах):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - До (C4)
+      - Ре (D4)
+      - Ми (E4)
+      - Ля (A4)
+      second:
+      - '262'
+      - '294'
+      - '330'
+      - '440'

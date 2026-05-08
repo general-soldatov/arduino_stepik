@@ -1,0 +1,173 @@
+- text:
+    path: 5_let_go/31_time_to_decide.md
+    data: null
+- code:
+    question:
+      types: code
+      text_data: Пора выкручиваться! Надо написать программу с новой мелодией!
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - ''
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/tone_1.cpp'
+        example: '5_let_go/002_prog.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- text:
+    path: 5_let_go/32_time_to_decide.md
+    data: null
+- code:
+    question:
+      types: code
+      text_data: Мдаа, доработаем программу, чтобы Дон Луиджи не заметил подмены!
+    answer:
+      sample_size: 1
+      feedback:
+        correct: ''
+        wrong: ''
+      tests:
+        input:
+        - '6 1'
+        - '6 0'
+      limits:
+        time: 5
+        memory: 256
+      code_path:
+        templates_data: 'template/arduino/tone_1.cpp'
+        example: '5_let_go/003_prog.cpp'
+        test: 'main.cpp'
+        code_run: 'template/code_run.py'
+        code_template: '2_last/000_01_led.cpp'
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте функцию tone() с её параметрами:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - tone(pin, frequency)
+      - tone(pin, frequency, duration)
+      - noTone(pin)
+      second:
+      - Генерирует звук бесконечно, пока не вызван noTone()
+      - Генерирует звук заданной длительности, затем автоматически останавливается
+      - Останавливает генерацию звука на указанном пине
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте условие if с результатом (int age = 15):'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - if (age > 18)
+      - if (age == 15)
+      - if (age != 15)
+      - if (age >= 15)
+      second:
+      - Ложно (15 не больше 18)
+      - Истинно (15 равно 15)
+      - Ложно (15 равно 15, а не не равно)
+      - Истинно (15 больше или равно 15)
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте ограничение tone() с его причиной:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - Нельзя использовать на пинах 3 и 11 с analogWrite()
+      - Нельзя воспроизводить две разные частоты одновременно
+      - Звук резко обрывается при вызове noTone()
+      second:
+      - Конфликт аппаратных таймеров
+      - Таймер может генерировать только одну частоту за раз
+      - Нет плавного затухания (Hardware limitation)
+- choice:
+    question:
+      types: choice
+      text_data: Какое значение яркости светодиода установит команда `analogWrite(9,
+        128)`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Примерно 50% яркости (128 из 255)
+      wrong:
+      - 0% (полностью выключен)
+      - 100% (полностью включён)
+      - 25% яркости
+- choice:
+    question:
+      types: choice
+      text_data: Что делает оператор `i--`?
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      correct:
+      - Уменьшает i на 1
+      wrong:
+      - Увеличивает i на 1
+      - Умножает i на -1
+      - Присваивает i значение -1
+- matching:
+    question:
+      types: matching
+      text_data: 'Сопоставьте функцию с её назначением:'
+      code_path: null
+      image: null
+      help: null
+    answer:
+      sample_size: null
+      feedback:
+        correct: ''
+        wrong: ''
+      first:
+      - digitalWrite()
+      - analogWrite()
+      - delay()
+      - Serial.println()
+      second:
+      - Устанавливает на пине HIGH (5V) или LOW (0V)
+      - Генерирует ШИМ-сигнал для управления яркостью (0-255)
+      - Останавливает программу на заданное количество миллисекунд
+      - Выводит данные в монитор последовательного порта с переходом на новую строку
+- text:
+    path: 5_let_go/33_time_to_decide.md
+    data: null
